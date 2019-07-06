@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout</title>
+    <link rel="shortcut icon" href="image/Icon.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script defer src="js/Script.js"></script>
+    <script defer src="js/Script_table.js"></script>
+    <script defer src="js/Button.js"></script>
+    <script defer src="js/slider.js"></script>
+    <script defer src="js/Tabs.js"></script>
+    <script defer src="js/Student-Table.js"></script>
+    <script defer src="js/Promise.js"></script>
+</head>
+<body>
+
+<div>
+    <header>
+        <ul id="top-bar">
+            <a href="#" class="menu"><li class="list">Учебник</li></a>
+            <a href="#" class="menu"><li class="list">Курсы</li></a>
+            <a href="#" class="menu"><li class="list">Форум</li></a>
+            <a href="#" class="menu"><li class="list">ES5</li></a>
+            <a href="#" class="menu"><li class="list">Тесты знаний</li></a>
+            <a href="#" class="menu"><li class="list">Стажировки</li></a>
+        </ul>
+    </header>
+</div>
+
+<div class="container">
+    <div class="header">
+        <input class="nav-burger__checkbox" type="checkbox" id="burger">
+        <label class="nav-burger" for="burger">Меню</label>
+        <nav class="nav">
+            <div class="tabs-container">
+                <ul class="nav-tabs">
+                    <li><a href="https://jsbin.com/lunaqemuci/edit?js,console" class="nav__iteme" target="_blank">Home work2</a></li>
+                    <li><a href="https://jsbin.com/tazevanovi/1/edit?js,console" class="nav__iteme" target="_blank">Home work3</a></li>
+                    <li><a href="https://jsbin.com/xojehubuxu/1/edit?js,console" class="nav__iteme" target="_blank">home work4</a></li>
+                    <li><a href="https://trello.com/c/Iu4UkVTU/4-hw6" class="nav__iteme" target="_blank">Home work6</a></li>
+                    <li><a href="https://trello.com/c/OoGCJInj/6-hw8" class="nav__iteme" target="_blank">Home work8</a></li>
+                    <li><a href="#tabs1" class="nav__item">Table</a></li>
+                    <li><a href="#tabs2" class="nav__item">Кнопки</a></li>
+                    <li><a href="#tabs3" class="nav__item">Слайдер</a></li>
+                    <li><a href="#tabs4" class="nav__item">Таблица студентов</a></li>
+                    <li><a id="status_bar" href="#tabs5" class="nav__item">Промисы</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div class="foreground"></div>
+
+<div class="midground">
+    <div class="tuna"></div>
+</div>
+
+<div class="background">
+
+</div>
+<div class="tabs">
+<section class="tab-pane" id="tabs1">
+    <div class="block">
+        <div id="table">
+        <div class="interface-description">
+            <p>Вы можете создать таблицу с ограничениями до 10 колонок и 10 строк!</p>
+            <p class="messageTab"></p>
+            <br/>
+        </div>
+        <input type="text"id="rows"> Строки
+        <br/>
+        <input type="text" id="columns"> Колонки
+        <br/><br/>
+        <input type="button" id="button" value="Сформировать" >
+        <div id="picture-table" class="picture-table">
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section class="tab-pane" id="tabs2">
+    <div class="block">
+        <div class="interface-description">
+        <button class="button-green">Кнопочка</button>
+        <button class="button-red">Кнопуля</button>
+        <button class="button-blue">Кнопульчонок</button>
+        </div>
+    </div>
+</section>
+
+
+<section class="tab-pane" id="tabs3">
+    <div class="block">
+        <div class="interface-description">
+            <div class="wrap">
+                <div id="slides">
+                    <img class="slides-item" src="image/black_hole.png" alt="1" title="black_hole">
+                    <img class="slides-item" src="image/Crew_Dragon.png" alt="2" title="Crew_Dragon">
+                    <img class="slides-item" src="image/Doctor_Who.png" alt="3" title="Doctor_Who">
+                    <img class="slides-item" src="image/Don`t_Panic.png" alt="4" title="Don`t_Panic">
+                    <img class="slides-item" src="image/Power.png" alt="5" title="Power">
+                </div>
+                <div class="buttons-block">
+                    <div id="left-button"></div>
+                    <div id="right-button"></div>
+                </div>
+                <div class="dots-block">
+                    <div class="dots-item active"></div>
+                    <div class="dots-item"></div>
+                    <div class="dots-item"></div>
+                    <div class="dots-item"></div>
+                    <div class="dots-item"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="tab-pane" id="tabs4">
+        <div class="block">
+            <div class="interface-description">
+                <div id="information">
+                    <div id="input">
+                        <label class="text">First Name:</label><input onkeyup="check();" onkeypress="check();" onchange="check();" id="fname" class="data" type="text" placeholder="First Name"/>
+                        <br/><br/>
+                        <label class="text">Last Name:</label><input onkeyup="check();" onkeypress="check();" onchange="check();" id="lname" class="data" type="text" placeholder="Last Name"/>
+                        <br/><br/>
+                        <label class="text">Receipt date:</label><input onkeyup="check();" onkeypress="check();" onchange="check();" id="age" class="data" type="text" placeholder="Receipt date"/>
+                        <br/><br/>
+                        <label class="text">Expiration date:</label><input onkeyup="check();" onkeypress="check();" onchange="check();" id="expiration" class="data" type="text" placeholder="Expiration date"/>
+                        <br/><br/>
+                        <label class="text">Filter:</label><input onkeyup="check();" onkeypress="check();" onchange="check();" id="filter" class="data" type="text" placeholder="Search for First names"/>
+                    </div>
+                    <div id="button-list">
+                        <input id="save" onclick="addRow()" class="list-stud" type="button" value="Save" disabled>
+                        <input id="clearButton" class="list-stud" type="button" value="Clear">
+                    </div>
+                </div>
+                <table id="student-lister">
+                    <tr id="student-list">
+                        <td id="index1">Id</td>
+                        <td id="index2">First Name</td>
+                        <td id="index3">Last Name</td>
+                        <td id="index4">Receipt date</td>
+                        <td id="index7">Expiration date</td>
+                        <td id="index5">Edit</td>
+                        <td id="index6">Delete</td>
+
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+    <section class="tab-pane" id="tabs5">
+        <div class="block">
+            <div class="interface-description">
+                <div id="promise">
+                    <progress id="elem">
+
+                    </progress>
+                    <br /><br />
+                    <input type="button" id="button_promise_one" value="По одному" disabled>
+                    <input type="button" id="button_promise_two" value="Все вместе" disabled>
+                    <article id="promise1">
+                        <img id="img1" src="image/nba.png" alt="" class="block_promise1">
+                        <div class="promise1">
+                            <h1>promise1</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias consequuntur cum doloribus dolorum esse et eum ex explicabo itaque labore laboriosam, maxime molestiae molestias non nulla optio tempore voluptas!</p>
+                        </div>
+                    </article>
+                    <article id="promise2">
+                        <img id="img2" src="image/nba.png" alt="" class="block_promise2">
+                        <div>
+                            <h1>promise2</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias consequuntur cum doloribus dolorum esse et eum ex explicabo itaque labore laboriosam, maxime molestiae molestias non nulla optio tempore voluptas!</p>
+                        </div>
+                    </article>
+                    <article id="promise3">
+                        <img id="img3" src="image/nba.png" alt="" class="block_promise3">
+                        <div>
+                            <h1>promise3</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias consequuntur cum doloribus dolorum esse et eum ex explicabo itaque labore laboriosam, maxime molestiae molestias non nulla optio tempore voluptas!</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<div id="footer">
+    &copy; Кацанюк Ярослав
+    <div id="clock">
+        <span class="hour">hh</span>:<span class="min">mm</span>:<span class="sec">ss</span> Date:<span class="date">dt</span>
+    </div>
+    <time id="footer-timer">00:00:00</time>
+    <div id="dimensions" class="dim">
+        <span>Width: <span class="w"></span></span>
+        <span>Height: <span class="h"></span></span>
+    </div>
+
+</div>
+</body>
+</html>
+
